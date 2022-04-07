@@ -27,7 +27,7 @@ function App() {
         </button>
         {exhibitions.map((ex) => {
           return (
-            <a href="#" className="bar-item">
+            <a href="javascript:void(0);" className="bar-item">
               {ex.title}
             </a>
           );
