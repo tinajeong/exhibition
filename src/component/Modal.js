@@ -57,9 +57,10 @@ export default function Modal(props) {
                   alert("유효한 이미지 주소가 아닙니다.");
                   return;
                 }
+                console.log(image);
                 const newExhibition = {
                   title: title,
-                  image: image,
+                  src: image,
                   id: props.exhibitions.length + 1,
                 };
                 const newExhibitions = props.exhibitions;
