@@ -90,6 +90,10 @@ button {
   border-radius: 6px;
 }
 
+.bar-item {
+  display: flex;
+  padding: 5px;
+}
 /* container */
 .container {
   margin: 5px;
