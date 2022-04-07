@@ -27,9 +27,9 @@ function App() {
         </button>
         {exhibitions.map((ex) => {
           return (
-            <a href="/item" className="bar-item">
+            <span className="bar-item">
               {ex.title}
-            </a>
+            </span>
           );
         })}
       </div>
