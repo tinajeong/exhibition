@@ -41,26 +41,33 @@ export default function Modal(props) {
               id="image"
               onChange={(e) => setImage(e.target.value)}
             />
-            <button className="regModal" onClick={(e) => {
-                  e.preventDefault();
+            <button
+              className="regModal"
+              onClick={(e) => {
+                e.preventDefault();
 
-                  if (title === "") {
-                    alert("전시회 명을 입력하세요.");
-                    return;
-                  }
-                  if (image === "") {
-                    alert("전시회 이미지 주소를 입력하세요.");
-                    return;
-                  } else if (!isValidHttpUrl(image)) {
-                    alert("유효한 이미지 주소가 아닙니다.");
-                    return;
-                  }
-                  const newExhibition = {title:title,image:image};
-                  const newExhibitions = props.exhibitions;
-                  newExhibitions.push(newExhibition);
-                  props.setExhibitions(newExhibitions)
-                  props.setVisible(false);
-            }}>
+                if (title === "") {
+                  alert("전시회 명을 입력하세요.");
+                  return;
+                }
+                if (image === "") {
+                  alert("전시회 이미지 주소를 입력하세요.");
+                  return;
+                } else if (!isValidHttpUrl(image)) {
+                  alert("유효한 이미지 주소가 아닙니다.");
+                  return;
+                }
+                const newExhibition = {
+                  title: title,
+                  image: image,
+                  id: props.exhibitions.length + 1,
+                };
+                const newExhibitions = props.exhibitions;
+                newExhibitions.push(newExhibition);
+                props.setExhibitions(newExhibitions);
+                props.setVisible(false);
+              }}
+            >
               등록하기
             </button>
           </form>
@@ -83,4 +90,3 @@ function isValidHttpUrl(url_str) {
 
   return url.protocol === "http:" || url.protocol === "https:";
 }
-
