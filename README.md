@@ -1,3 +1,10 @@
+# Demo
+![메인](./public/images/main.webp)
+> 초기 메인  
+
+![이미지추가](./public/images/modal.webp)
+> 이미지추가모달
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
