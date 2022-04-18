@@ -57,6 +57,7 @@ button {
 /* side-bar */
 .side-bar-title {
   padding-left: 10px;
+  margin-top: 13px;
 }
 
 .sidebar {
@@ -156,13 +157,18 @@ button {
 }
 
 .modal-header {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .modal p + p {
   margin-top: 1rem;
 }
 
+.modal #description{
+  margin: 2px;
+  font-size: 0.8em;
+  color: #8b8386;
+}
 .is-visible {
   visibility: visible;
   opacity: 1 !important;
@@ -200,7 +206,7 @@ button {
     width: 380px;
     height: 380px;
     border-top: solid #ffefdb;
-    border-bottom: solid #ffefdb;
+    border-bottom: solid 2px #ffefdb;
   }
 }
 @media only screen and (max-width: 1599px) and (min-width: 1024px) {

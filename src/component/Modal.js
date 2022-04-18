@@ -33,7 +33,7 @@ export default function Modal(props) {
               id="title"
               onChange={(e) => setTitle(e.target.value)}
             />
-            <label htmlFor="image">이미지</label>
+            <label htmlFor="image">이미지</label><span id="description">url을 입력하세요.</span>
             <input
               required
               maxLength={100}
